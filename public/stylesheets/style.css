@@ -92,6 +92,7 @@ a .loginText {
   justify-content: center;
   align-items: center;
   margin: auto;
+  margin-bottom: 520px;
   margin-top: 40px;
   box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2);
 }
