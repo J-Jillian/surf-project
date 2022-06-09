@@ -1,4 +1,51 @@
+<!-- <style>
+
+  #form{
+    color: #e4edee;
+  }
+
+  button{
+    color: black;
+    all: unset;
+    background: white;
+    padding: 1em 4em;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    position: relative;
+    transition: all 300ms 
+  }
+
+  input{
+    background: transparent;
+    border: 1px solid white;
+    padding: 1em 2em;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 18px;
+  
+  }
+
+  placeholder { 
+    color: hsla(0, 100%, 99%, 0.759);
+  }
+   
+</style> -->
+
+
 <style>
+
+body{
+  background:linear-gradient(to bottom, rgba(0, 0, 0, 0.316), rgba(65, 65, 67, 0.515), rgba(30, 30, 30, 0.713), rgba(14, 14, 14, 0.69), rgb(0, 0, 0)), url('/images/login-1.jpg') no-repeat center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+  }
+
   .container{
   margin:auto; 
   display: flex;
@@ -18,7 +65,7 @@
       .box{
         margin:50px;
         padding: 20px;
-        width:300px;
+        width:400px;
         border-radius: 20px;
       }
     }
@@ -29,20 +76,36 @@
   margin-top: 10px;  
   }
   .forcastH1{
-    font-size: 40px;
-    padding: 10px;
-    border-bottom:1px solid rgb(227, 226, 226);
+    font-size: 70px;
+    margin-top: 100px;
+    padding: 40px;
   }
+
+ h2{
+  padding: 40px;
+  border-bottom:1px solid rgb(227, 226, 226);
+ } 
+.beaches{
+  border:1px solid rgb(227, 226, 226);
+} 
+
+.beach-box{
+  
+display: block;
+flex-direction: row;
+flex-wrap:wrap;
+}
   </style>
   
   <section class="container">
+    <h1 class="forcastH1" >SURF</h1>
     <div class="box">
-    <div class="h1container"><h1 class="forcastH1">FORECAST</h1></div>
+    <div class="h1container"><h2>WORLDWIDE FORECAST</h2></div>
       
-      <div>
+      <div class="beach-box">
         <% beachesResponse.forEach((spot) => { %>
           <ul class="forecastList">
-            <li><a href="/forecast-detail/<%= spot.spotId %>"><%= spot.spotName %></a></li>
+            <div class="beaches"><li><a href="/forecast-detail/<%= spot.spotId %>"><%= spot.spotName %></a></li></div>
           <% }) %> 
           </ul>
       </div>

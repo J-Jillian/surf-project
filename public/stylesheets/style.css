@@ -263,6 +263,65 @@ button:hover {
   color: rgb(73, 73, 73);
 }
 
+
+/* SPOT DETAILS */
+
+.detailsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 80px;
+}
+
+.detailsSurf {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.spotDescription {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  margin: 20px;
+  max-width: 1200px;
+}
+
+.humanRelation {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  margin: 20px;
+  max-width: 200px;
+}
+
+.spotDetailsMax {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  margin: 20px;
+  max-width: 200px;
+}
+
+.spotDetailsMin {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  margin: 20px;
+  max-width: 200px;
+}
+
+.humanRelationText {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
 /* FAVORITES */
 
 .userFavorites {
