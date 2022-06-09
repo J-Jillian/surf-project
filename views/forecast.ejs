@@ -61,6 +61,10 @@ body{
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 80px;
   }
+
+  li{
+    list-style: none;
+  }
   @media only screen and ( max-width:768px ){	
       .box{
         margin:50px;
@@ -75,10 +79,12 @@ body{
   .h1container{
   margin-top: 10px;  
   }
-  .forcastH1{
-    font-size: 70px;
-    margin-top: 100px;
-    padding: 40px;
+  
+
+  li{
+    padding: 20px;
+    color: aliceblue;
+    
   }
 
  h2{
@@ -87,6 +93,7 @@ body{
  } 
 .beaches{
   border:1px solid rgb(227, 226, 226);
+  list-style: none;
 } 
 
 .beach-box{
@@ -98,9 +105,9 @@ flex-wrap:wrap;
   </style>
   
   <section class="container">
-    <h1 class="forcastH1" >SURF</h1>
+    <h1 class="forcastH1" >WORLDWIDE<br>FORECAST</h1>
     <div class="box">
-    <div class="h1container"><h2>WORLDWIDE FORECAST</h2></div>
+    <div class="h1container"><h2>ALL SURF SPOTS</h2></div>
       
       <div class="beach-box">
         <% beachesResponse.forEach((spot) => { %>

@@ -2,11 +2,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  
+  text-transform: uppercase;
 }
-
-
-
 body {
 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -14,12 +11,139 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 1240px;
+
+}
+
+/* titulos h1 */
+.forcastH1{
+  font-size: 70px;
+  margin-top: 100px;
+  padding: 40px;
+}
+.h1container{
+display: flex;
+text-align: center;  
+justify-content: center;
+}
+
+/* Navbar */
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  /* background: #1b1b1b; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
 }
 
 
-ul a {
+
+
+
+
+/* ul a {
   color: #ffffff;
-}
+} */
 
 
 
@@ -43,85 +167,18 @@ p {
   margin: 8px;
 }
 
-/* NAVBAR */
 
-
-nav {
-  /* background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(25px);
-  min-height: 80px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center; */
-  background-color: #1b1b1b;
-}
-
-nav:after{
-content:''; 
-clear: both;
-display:table; 
-}
-
-nav .logo{
-  float: left;
-  line-height: 70px;
-  padding-left: 60px ;
-  
-}
-
-nav ul{
-float :right;
+/* .menuList {
+display: flex;
 list-style: none;
-margin-right: 40px;
-position:relative;
-}
-
-nav ul li{
-  float:left;
-  display:inline-block;
-  background: #1b1b1b;
-  margin: 0 5px;
-}
-
-nav ul li a{
-  color: #ffffff;
-  text-decoration: none;
-  line-height: 70x;
-  font-size: 18px;
-  padding: 8px 15px;
-}
-
-nav ul ul{
-position: absolute; 
-top: 70px; 
-}
-nav ul ul li{
-  position: relative; 
-  margin: 0px;
-  width: 150px;
-  float:none;
-  display: list-item;
-  border-bottom: 1px solid rgba(0, 0, 0,0,.3);
-  }
-
-  nav ul ul ul li{
-    position: relative;
-    top: -70px;
-    left:150px;
-  }
-
-
-.menuList {
-  display: flex;
-  list-style: none;
  margin-bottom: 80px;
-}
+} */
 
-li {
+/* li{
   padding: 20px;
-}
+} */
 
-a {
+ a {
   font-size: 16px;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -129,14 +186,31 @@ a {
   margin: 8px;
   width: 160px;
   border-radius: 10px;
+} 
+
+/* a:hover {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.24), 0 8px 40px 0 rgba(255, 255, 255, 0.2);
 } */
 
-a:hover {
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.24), 0 8px 40px 0 rgba(255, 255, 255, 0.2);
-}
+.loginText {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 12px;
+  margin: 8px;
+  width: 160px;
+  border-radius: 10px;
+} 
 
-a .loginText {
-  color: white;
+.signupText{
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 12px;
+  margin: 8px;
+  width: 160px;
+  border-radius: 10px;
+
 }
 
 /* INDEX */
@@ -288,7 +362,7 @@ button:hover {
 
 /* PROFILE */
 
-.profileCard{
+ .profileCard{
   backdrop-filter: blur(12px);
   background-image: url('/images/profile.png');
   background-repeat: no-repeat;
@@ -302,10 +376,10 @@ button:hover {
   align-items: center;
   margin: auto;
   margin-top: 40px;
-  box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2); */
 }
 
-.profileInfo {
+ .profileInfo {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   backdrop-filter: blur(12px);
@@ -427,7 +501,7 @@ button:hover {
 }
 
 .userFavoritesIndex {
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -501,6 +575,6 @@ button:hover {
 /* logo */
 .logo{
   width: auto;
-  height: 20px;
-  margin-top: 20px;
+  height: 25px;
+  margin-top: -20px;
 }
