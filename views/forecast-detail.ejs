@@ -7,29 +7,34 @@
   </div>
 
   <div class="detailsSurf"> 
-    <div class="humanRelation">
-      <p class="humanRelationText">
-        Human Relation:
-        <%=spotDetails.humanRelation%> 
-      </p>
-    </div>
     
     <div class="spotDetailsMax">
-      <p>
+      <p class="spotDetailsText">
         <%=spotDetails.max%> 
         max
       </p>
+      <p>Wave size</p>
     </div>
     
     <div class="spotDetailsMin">
-      <p>
+      <p class="spotDetailsText">
         <%=spotDetails.min%> 
         min
       </p>
+      <p>Wave size</p>
     </div>
+
+    <div class="humanRelation">
+      <p class="humanRelationText">
+        <%=spotDetails.humanRelation%> 
+      </p>
+      <p> Human Relation</p>
+    </div>
+
   </div>
   
   <div class="spotDescription">
+    <h3> About:</h3>
     <p>
       <%=spotDetails.beach.spotDescription%> 
     </p>
