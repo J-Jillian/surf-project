@@ -10,7 +10,7 @@ body {
 
   font-family: 14px 'Red Hat Display', sans-serif;
   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
-  background-image: url('/images/heroImage.jpg');
+  background-image:linear-gradient( url('/images/heroImage.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 1240px;
