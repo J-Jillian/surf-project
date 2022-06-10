@@ -1,35 +1,46 @@
-<div>
+<div class="detailsContainer">
+ 
+<div class="spotNameDetails">
   <h1>
     <%=spotDetails.beach.spotName%> 
   </h1>
   </div>
+
+  <div class="detailsSurf"> 
+    
+    <div class="spotDetailsMax">
+      <p class="spotDetailsText">
+        <%=spotDetails.max%> 
+        max
+      </p>
+      <p>Wave size</p>
+    </div>
+    
+    <div class="spotDetailsMin">
+      <p class="spotDetailsText">
+        <%=spotDetails.min%> 
+        min
+      </p>
+      <p>Wave size</p>
+    </div>
+
+    <div class="humanRelation">
+      <p class="humanRelationText">
+        <%=spotDetails.humanRelation%> 
+      </p>
+      <p> Human Relation</p>
+    </div>
+
+  </div>
   
-  <div>
+  <div class="spotDescription">
+    <h3> About:</h3>
     <p>
       <%=spotDetails.beach.spotDescription%> 
     </p>
   </div>
   
-  <div>
-    <p>
-      Human Relation:
-      <%=spotDetails.humanRelation%> 
-    </p>
-  </div>
-  
-  <div>
-    <p>
-      <%=spotDetails.max%> 
-      max
-    </p>
-  </div>
-  
-  <div>
-    <p>
-      <%=spotDetails.min%> 
-      min
-    </p>
-  </div>
+
   <div>
     <form method="POST" action="/forecast-detail/<%=spotDetails.beach.spotId%>">
       <button  type="submit">
@@ -38,3 +49,4 @@
   Add to Favorites
     </button>
   </div>
+</div>
