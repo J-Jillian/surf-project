@@ -24,15 +24,63 @@ body {
 
 /* titulos h1 */
 .forcastH1{
-  font-size: 50px;
+  font-size: 80px;
   margin-top: 100px;
   padding: 40px;
 }
 .h1container{
 display: flex;
+flex-direction: column;
 text-align: center;  
 justify-content: center;
 }
+
+/* arrow */
+
+.icon {
+  position: absolute;
+  top: 59%;
+  left: 40%;
+  transform: translate(-50%,-50%);
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 25px;
+  width: 90%;
+  height: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  animation: arrow 700ms linear infinite;
+}
+
+.arrow::after, .arrow::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 10px;
+  right: -8px;
+  background-color: #fff;
+}
+
+.arrow::after {
+  top: -12px;
+  transform: rotate(45deg);
+}
+
+.arrow::before {
+  top: 12px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  transform: rotate(-45deg);
+}
+
+/* form */
+
+
+
 
 /* Navbar */
 nav{
@@ -127,6 +175,11 @@ input[type="checkbox"]{
     background: none;
     color: cyan;
   }
+  .icon {
+    top: 69%;
+    left: 30%
+
+}
 }
 .content{
   position: absolute;
@@ -143,6 +196,8 @@ input[type="checkbox"]{
   font-size: 40px;
   font-weight: 700;
 }
+
+
 
 
 
@@ -292,7 +347,7 @@ background: paint(squircle);
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 200px;
   box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2);
 }
 
@@ -382,8 +437,13 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin: auto;
+<<<<<<< HEAD
   margin-top: 40px;
   box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2); 
+=======
+  margin-top: 200px;
+  box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2);
+>>>>>>> 364facf36d3253bb37b2b6e6b4406d0176715c73
 }
 
  .profileInfo {
@@ -395,6 +455,11 @@ button:hover {
 
 .helloSurfer {
   color: rgb(73, 73, 73);
+}
+
+.siginuparrow{
+font-size: 25px;
+
 }
 
 .loggedInAs {

@@ -47,7 +47,7 @@ router.get('/forecast-detail/:id', async (req, res) => {
 router.post('/forecast-detail/:id', async(req, res) => {
   try {
     const {id} = req.params
-    console.log('req.session',req.session.currentUser._id)
+    console.log('req.session',req.session.currentUser)
     const userId = req.session.currentUser._id;
     const favoriteBeach = await Beach.findOne({spotId:id})
     const nameBeach = favoriteBeach.spotName; 
