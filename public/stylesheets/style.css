@@ -77,6 +77,11 @@ justify-content: center;
   transform: rotate(-45deg);
 }
 
+/* form */
+
+
+
+
 /* Navbar */
 nav{
   display: flex;
@@ -191,6 +196,8 @@ input[type="checkbox"]{
   font-size: 40px;
   font-weight: 700;
 }
+
+
 
 
 
@@ -341,7 +348,7 @@ background: paint(squircle);
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 200px;
   box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2);
 }
 
@@ -431,7 +438,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 200px;
   box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.2);
 }
 
@@ -444,6 +451,11 @@ button:hover {
 
 .helloSurfer {
   color: rgb(73, 73, 73);
+}
+
+.siginuparrow{
+font-size: 25px;
+
 }
 
 .loggedInAs {
