@@ -341,7 +341,7 @@ background: paint(squircle);
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 40px;
   backdrop-filter: blur(12px);
-  height: 400px;
+  height: 500px;
   width: 560px;
   display: flex;
   flex-direction: column;
@@ -643,6 +643,6 @@ font-size: 25px;
 /* logo */
 .logo{
   width: auto;
-  height: 25px;
+  height: 35px;
 
 }
