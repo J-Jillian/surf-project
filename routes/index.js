@@ -24,9 +24,11 @@ router.get('/forecast', async (req, res, next) => {
 router.get('/forecast-detail/:id', async (req, res) => {
   try {
     const {id} = req.params
+    console.log(id)
     const singleSpot = await axios.get(`https://services.surfline.com/kbyg/spots/forecasts/wave?spotId=${id}&days=1&intervalHours=24&maxHeights=false`)
-    
+    console.log(singleSpot)
   const beach = await Beach.findOne({spotId:req.params.id})
+  console.log(beach)
   const humanRelation = singleSpot.data.data.wave[0].surf.humanRelation;
   const max = singleSpot.data.data.wave[0].surf.max;
   const min= singleSpot.data.data.wave[0].surf.min;
